@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+</head>
+<body>
+
+     <h1>JavaScript SlideShow</h1>
+      <img src="./mountains.jpg" id="myImg" height="400" width="400">
+      <button onclick="run()">Next Image</button>
+      <script>
+        var i = 0;
+        var names = ['mountains.jpg','field.jpg','admiral.jpg'];
+        function run() {
+          document.getElementById("myImg").src = names[i++];
+           if (i === names.length) {
+            i = 0;
+           }
+
+        }
+        setInterval(run, 3000);
+        
+      </script>
+</body>
+</html>
