@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+</head>
+<body>
+
+     <h1>JavaScript SlideShow</h1>
+     <h2 id="number">image number</h2>
+      <img src="1.jpg" id="myImg" height="400" width="400">
+      <button onclick="run()">Next Image</button>
+      <button onclick="previews()">Previews Image</button>
+      <script>
+        var i = 0;
+        var names = ['1.jpg','2.jpg','3.jpg'];
+        function run() {
+        
+          document.getElementById("number").innerHTML = i;
+          if (i === 2) {
+            document.getElementById("myImg").src = names[2];
+            document.getElementById("number").innerHTML = i;
+            }
+            else {
+              document.getElementById("myImg").src = names[++i];
+              document.getElementById("number").innerHTML = i;
+            }
+                
+
+        }
+        function previews() {
+           
+            if (i === 0) {
+            document.getElementById("myImg").src = names[0];
+            document.getElementById("number").innerHTML = i;
+            }
+            else {
+              document.getElementById("myImg").src = names[--i];
+              document.getElementById("number").innerHTML = i;
+            }
+           
+       
+        
+        }
+      
+
+                       
+                      
+                        
+          
+          
+                 
+        
+      </script>
+</body>
+</html>
